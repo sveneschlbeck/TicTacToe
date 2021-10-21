@@ -55,11 +55,15 @@ void printOpeningMessage() {
 
     cout << "   WELCOME TO... " << endl;
     cout << "    " << endl;
+    cout << "   ############################" << endl;
     cout << "    _______   _______   _______" << endl;
     cout << "   |__   __| |__   __| |__   __|" << endl;
     cout << "      | |       | |       | |" << endl;
     cout << "      |_|ic     |_|ac     |_|oe" << endl;
     cout << "    " << endl;
+    cout << "   by Sven Eschlbeck" << endl;
+    cout << "    " << endl;
+    cout << "   ############################" << endl;
     cout << "    " << endl;
 }
 
@@ -72,6 +76,14 @@ void printIndices() {
     cout << "   " << 4 << " | " << 5 << " | " << 6 << endl;
     cout << "   " << 7 << " | " << 8 << " | " << 9 << endl;
     cout << "    " << endl;
+}
+
+
+int firstDigit(int n) {
+    while (n >= 10) {
+        n /= 10;
+    }
+    return n;
 }
 
 
@@ -117,11 +129,18 @@ int main()
 
     while ((gameOn == true) && (indexList.size() < 9)) {
 
-    again1: // Inloop point 1
+        again1: // Inloop point 1
 
         cout << "   " + player1 + ", where would you like to place a chip? Enter the index (1 - 9).\n" << endl;
         int index1; // Initializing index 1
         cin >> index1; // Writing input of player 1 into index 1
+
+        if (cin.fail()) {
+            cout << "\n   [ERROR] Please enter a valid integer.\n" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            goto again1;
+        }
 
         bool found1 = (find(indexList.begin(), indexList.end(), index1) != indexList.end()); // Search indexList for entered index 1
         if (found1 == true) {
@@ -163,7 +182,7 @@ int main()
                 break;
             default:
                 cout << "    " << endl;
-                cout << "   Invalid input. Try again." << endl;
+                cout << "   [Index out of reach] Invalid input. Try again.\n" << endl;
                 goto again1;
             }
 
@@ -179,7 +198,6 @@ int main()
                 break;
             }
 
-
             if ((gameOn == true) && (indexList.size() < 9)) {
 
             again2: // Inloop point 2
@@ -187,6 +205,13 @@ int main()
                 cout << "   " + player2 + ", where would you like to place a chip? Enter the index (1 - 9).\n" << endl;
                 int index2; // Initializing index 2
                 cin >> index2; // Writing input of player 2 into index 2
+
+                if (cin.fail()) {
+                    cout << "\n   [ERROR] Please enter a valid integer.\n" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    goto again2;
+                }
 
                 bool found2 = (find(indexList.begin(), indexList.end(), index2) != indexList.end()); // Search indexList for entered index 2
                 if (found2 == true) {
@@ -228,7 +253,7 @@ int main()
                         break;
                     default:
                         cout << "    " << endl;
-                        cout << "   Invalid input. Try again." << endl;
+                        cout << "   [Index out of reach] Invalid input. Try again.\n" << endl;
                         goto again2;
                     }
 
