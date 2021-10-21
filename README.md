@@ -2,7 +2,6 @@
 Terminal-based TicTacToe Game
 
 *****
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/sveneschlbeck/tictactoe)
 ![GitHub language count](https://img.shields.io/github/languages/count/sveneschlbeck/tictactoe?color=pink)
 ![GitHub top language](https://img.shields.io/github/languages/top/sveneschlbeck/tictactoe?color=white)
 ![GitHub search hit counter](https://img.shields.io/github/search/sveneschlbeck/tictactoe/goto?color=brown)
