@@ -126,6 +126,7 @@ int main()
     // Game loop
     bool gameOn = true; // Flag indicating if game is on or off
     list<int> indexList; // Creating empty list; later to be filled with indices already used
+    end:
 
     while ((gameOn == true) && (indexList.size() < 9)) {
 
@@ -273,16 +274,18 @@ int main()
                     cout << "    " << endl;
                     cout << "   Game finished." << endl;
                     gameOn = false;
-                    break;
+                    goto end;
                 }
-                else if (winner == 2) {
+
+                if (winner == 2) {
                     cout << "   " + player2 + " won. Congratulations!" << endl;
                     cout << "    " << endl;
                     cout << "   Game finished." << endl;
                     gameOn = false;
-                    break;
+                    goto end;
                 }
-                else if ((indexList.size() == 9) && (gameOn == true)) {
+
+                if ((indexList.size() == 9) && (gameOn == true)) {
                     cout << "   Tie. Congratualtions to both!" << endl;
                     cout << "   Game finished." << endl;
                     gameOn = false;
