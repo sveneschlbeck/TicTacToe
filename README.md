@@ -23,6 +23,6 @@ Option 2: navigate to `TicTacToe/TicTacToe.cpp`, download, compile and execute t
 
 This code is licensed under ``GPL-3.0 License``.
 
-## Hardware & Software Requirements :computer:
+## Hardware & Software Requirements
 
 This program can be run without much computing power. It can be executed on any modern device using Microsoft's Windows operating system.
