@@ -17,7 +17,6 @@ int getWinner(const array<array<int, 3>, 3> &field) {
         }
     }
 
-
     // Check for winner vertically    
     for (int i = 0; i <= 2; i++) {
         if ((field[0][i] != 0) && (field[0][i] == field[1][i]) && (field[1][i] == field[2][i])) {
@@ -25,12 +24,10 @@ int getWinner(const array<array<int, 3>, 3> &field) {
         }
     }
 
-
     // Check for winner diagonally
     if ((field[0][0] != 0) && (field[0][0] == field[1][1]) && (field[1][1] == field[2][2])) {
                 return field[0][0];
-    }
-        
+    } 
     else if ((field[0][2] != 0) && (field[0][2] == field[1][1]) && (field[1][1] == field[2][0])) {
                 return field[0][2];
     }
@@ -184,6 +181,7 @@ int main()
 
 
             if ((gameOn == true) && (indexList.size() < 9)) {
+
             again2: // Inloop point 2
 
                 cout << "   " + player2 + ", where would you like to place a chip? Enter the index (1 - 9).\n" << endl;
