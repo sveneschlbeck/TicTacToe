@@ -1,6 +1,3 @@
-# TicTacToe
-Terminal-based TicTacToe Game
-
 *****
 ![GitHub language count](https://img.shields.io/github/languages/count/sveneschlbeck/tictactoe?color=pink)
 ![GitHub top language](https://img.shields.io/github/languages/top/sveneschlbeck/tictactoe?color=white)
@@ -10,7 +7,9 @@ Terminal-based TicTacToe Game
 ![GitHub last commit](https://img.shields.io/github/last-commit/sveneschlbeck/tictactoe)
 *****
 
-## Project description
+![TicTacToe logo](logo.png)
+
+## Project Description
 
 A terminal-based Tic-Tac-Toe game for two players, written in C++.
 
